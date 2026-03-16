@@ -18,18 +18,22 @@
       "xai:default": {
         "provider": "xai",
         "mode": "api_key"
+      },
+      "openrouter:default": {
+        "provider": "openrouter",
+        "mode": "api_key"
       }
     }
   },
   "agents": {
     "defaults": {
       "model": {
-        "primary": "xai/grok-4-1-fast"
+        "primary": "google/gemini-3.1-pro-preview"
       },
       "models": {
         "google/gemini-3.1-pro-preview": {},
         "google/gemini-3.1-flash-lite-preview": {},
-        "xai/grok-4-1-fast": {}
+        "openrouter/meta-llama/llama-4-scout": {}
       },
       "workspace": "/data/.openclaw/workspace"
     }
