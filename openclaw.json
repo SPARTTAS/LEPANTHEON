@@ -28,7 +28,7 @@
   "agents": {
     "defaults": {
       "model": {
-        "primary": "google/gemini-3.1-pro-preview"
+        "primary": "openrouter/meta-llama/llama-4-scout"
       },
       "models": {
         "google/gemini-3.1-pro-preview": {},
