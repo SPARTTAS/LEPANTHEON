@@ -15,12 +15,12 @@
         "provider": "google",
         "mode": "api_key"
       },
-      "xai:default": {
-        "provider": "xai",
-        "mode": "api_key"
-      },
       "openrouter:default": {
         "provider": "openrouter",
+        "mode": "api_key"
+      },
+      "groq:default": {
+        "provider": "groq",
         "mode": "api_key"
       }
     }
@@ -28,15 +28,28 @@
   "agents": {
     "defaults": {
       "model": {
-        "primary": "openrouter/meta-llama/llama-4-scout"
+        "primary": "google/gemini-3.1-pro-preview"
       },
       "models": {
         "google/gemini-3.1-pro-preview": {},
         "google/gemini-3.1-flash-lite-preview": {},
+        "groq/meta-llama/llama-4-scout-17b-16e-instruct": {},
         "openrouter/meta-llama/llama-4-scout": {}
       },
       "workspace": "/data/.openclaw/workspace"
-    }
+    },
+    "list": [
+      {
+        "id": "main",
+        "default": true,
+        "name": "Main Agent",
+        "workspace": "/data/.openclaw/workspace",
+        "agentDir": "/data/.openclaw/agents/main/agent",
+        "model": {
+          "primary": "openrouter/meta-llama/llama-4-scout"
+        }
+      }
+    ]
   },
   "tools": {
     "profile": "full"
